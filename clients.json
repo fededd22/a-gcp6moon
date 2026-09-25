@@ -1,0 +1,64 @@
+{
+  "clients": [
+    {
+      "id": "default",
+      "name": "Default Client",
+      "protocol": "vless",
+      "uuid": "d2cb8181-233c-4d18-9972-8a1b04db0044",
+      "path": "/by_moon",
+      "limitGB": 0,
+      "consumedUpload": 0,
+      "consumedDownload": 0,
+      "duration": "unlimited",
+      "durationValue": 0,
+      "createdAt": "2026-09-11T09:45:35.116Z",
+      "expiresAt": null,
+      "enabled": true
+    },
+    {
+      "id": "default-vmess",
+      "name": "Default Client (VMess)",
+      "protocol": "vmess",
+      "uuid": "b7e2a4d0-5f1c-4a8e-9b3d-6c2f0e4a7d19",
+      "path": "/by_moon_vmess",
+      "limitGB": 0,
+      "consumedUpload": 0,
+      "consumedDownload": 0,
+      "duration": "unlimited",
+      "durationValue": 0,
+      "createdAt": "2026-09-11T09:45:35.116Z",
+      "expiresAt": null,
+      "enabled": true
+    },
+    {
+      "id": "default-trojan",
+      "name": "Default Client (Trojan)",
+      "protocol": "trojan",
+      "uuid": "f3c8b6a2-1d9e-4c7b-a5f0-8e2d4b6c9a31",
+      "path": "/by_moon_trojan",
+      "limitGB": 0,
+      "consumedUpload": 0,
+      "consumedDownload": 0,
+      "duration": "unlimited",
+      "durationValue": 0,
+      "createdAt": "2026-09-11T09:45:35.116Z",
+      "expiresAt": null,
+      "enabled": true
+    },
+    {
+      "id": "default-shadowsocks",
+      "name": "Default Client (Shadowsocks)",
+      "protocol": "shadowsocks",
+      "uuid": "a7b3e94d812c5f60",
+      "path": "/ss",
+      "limitGB": 0,
+      "consumedUpload": 0,
+      "consumedDownload": 0,
+      "duration": "unlimited",
+      "durationValue": 0,
+      "createdAt": "2026-09-11T09:45:35.116Z",
+      "expiresAt": null,
+      "enabled": true
+    }
+  ]
+}
