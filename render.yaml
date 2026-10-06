@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: v2ray-telegram-bot
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_CHAT_ID
+        sync: false
+      - key: MURAD_SETUP_PASSWORD
+        generateValue: true
+      - key: DATA_DIR
+        value: /app/data

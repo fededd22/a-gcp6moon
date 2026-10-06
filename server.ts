@@ -685,12 +685,13 @@ detectCloudRunHostFromMetadata().then((detected) => {
 });
 
 function getPublicDomain(): string {
-  if (process.env.APP_URL) {
+  const appUrl = process.env.APP_URL || process.env.RENDER_EXTERNAL_URL;
+  if (appUrl) {
     try {
-      const u = new URL(process.env.APP_URL);
+      const u = new URL(appUrl);
       return u.hostname;
     } catch {
-      return process.env.APP_URL.replace(/^https?:\/\//, "").split("/")[0];
+      return appUrl.replace(/^https?:\/\//, "").split("/")[0];
     }
   }
   if (cachedPublicHost) return cachedPublicHost;
@@ -1049,7 +1050,7 @@ const binDir = path.join(process.cwd(), "bin");
 const v2rayPath = path.join(binDir, "v2ray");
 
 function ensureV2RayBinary() {
-  if (fs.existsSync(v2rayPath)) {
+  if (fs.existsSync(v2rayPath) && fs.statSync(v2rayPath).size > 0) {
     addLog("V2Ray binary exists at " + v2rayPath);
     return;
   }
