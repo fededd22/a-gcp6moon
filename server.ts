@@ -1064,7 +1064,7 @@ function ensureV2RayBinary() {
     const zipPath = path.join(binDir, "v2ray-linux-64.zip");
     addLog("Downloading V2Ray core zip from GitHub releases...");
 
-    execSync(`curl -L -o "${zipPath}" "https://github.com/v2fly/v2ray-core/releases/download/v5.14.1/v2ray-linux-64.zip"`, {
+    execSync(`curl -L -o "${zipPath}" "https://github.com/v2fly/v2ray-core/releases/download/v5.53.0/v2ray-linux-64.zip"`, {
       stdio: "inherit"
     });
 
