@@ -1255,7 +1255,7 @@ function generateV2RayConfigForSlot(slot: "A" | "B", clients: ClientConfig[]) {
     ]
   };
 
-  const configFile = path.join(process.cwd(), `config_${slot}.json`);
+  const configFile = path.join(DATA_DIR, `config_${slot}.json`);
   fs.writeFileSync(configFile, JSON.stringify(config, null, 2), "utf8");
   return configFile;
 }

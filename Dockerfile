@@ -20,8 +20,11 @@ RUN mkdir -p bin data \
   && rm /tmp/v2ray.zip
 COPY --from=build /app/dist ./dist
 COPY server.ts config.json docker-entrypoint.sh ./
-RUN chmod +x docker-entrypoint.sh
+RUN chmod +x docker-entrypoint.sh \
+  && useradd --uid 10014 --no-create-home --shell /usr/sbin/nologin app \
+  && chown -R 10014:10014 /app
 ENV DATA_DIR=/app/data
 EXPOSE 3000
+USER 10014
 ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["node", "dist/server.cjs"]
